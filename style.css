@@ -1,0 +1,164 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+:root{
+	--primary:#3a3a3a;
+	--primary-dark:#302d2d;
+	--red:#ff0000;
+	--green:#008104;
+}
+
+.section-container{
+	display: grid;
+	height: 100vh;
+	place-items: center;
+	background-color: var(--primary);
+}
+.box-container{
+	background-color: var(--primary-dark);
+	color: white;
+	padding: 20px;
+	width: 450px;
+	height: 650px;
+	position: absolute;
+}
+.upper-box{
+	display: flex;
+	flex-direction: column;
+	place-items: center;
+	gap: 10px;
+	letter-spacing: 2px;
+}
+.balance-container{
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	place-items: center;
+}
+.transaction-head{
+	font-size: 0.8rem;
+	letter-spacing: 2px;
+	/* text-transform: uppercase; */
+}
+.transaction-container{
+	margin-top: 10px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.transaction {
+	display: flex;
+	flex-direction: column;
+}
+.transaction .upper{
+display: flex;
+}
+.lower{
+	background-color: white;
+color: black;
+padding: 10px ;
+display: flex;
+gap: 10px;
+display: none;
+transition: 0.2s;
+}
+.showIcon{
+	display: flex;
+}
+.transaction p{
+	font-size: 0.8rem;
+}
+.left{
+	place-items: center;
+	display: flex;
+	background-color: white;
+	color: black;
+	padding: 5px 10px;
+	flex-grow: 1;
+	justify-content: space-between;
+}
+.right{
+	display: grid;
+	height: 40px;
+	width: 40px;
+	place-items: center;
+	justify-content: center;
+	align-items: center;
+	/* background-color: var(--green); */
+}
+
+.credit{
+	background-color: var(--green);
+}
+.debit{
+	background-color: var(--red);
+}
+.transaction-form{
+	background-color: white;
+	width: 100%;
+	height: 200px;
+	bottom: 0;
+	left: 0;
+	position:absolute;
+	color: black;
+	padding: 20px;
+}
+.transaction-form{
+	display: flex;
+	text-transform: capitalize;
+	flex-direction: column;
+	gap: 10px;
+}
+.input-container{
+	display: flex;
+	width: 100%;
+	/* overflow: hidden; */
+	gap: 10px;
+	/* flex-direction: column; */
+	font-size: 0.8rem;
+}
+.input-container input::placeholder{
+	font-size: 0.7rem;
+	padding: 5px;
+}
+.text-input,.amount-input{
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+#text{
+	width: 250px;
+	height: 40px;
+}
+#amount{
+	width: 150px;
+	height: 40px;
+}
+.amount-input{
+	flex: 1;
+}
+.button-container{
+	display: flex;
+	width: 100%;
+}
+.button-container button{
+	display: flex;
+	flex-direction: column;
+	place-items: center;
+	width: 100%;
+	border: none;
+	color: white;
+	font-size: 0.8rem;
+	padding: 5px 10px;
+	text-transform: capitalize;
+	margin-top: 10px;
+	cursor: pointer;
+}
+.expense-btn{
+	background-color: var(--red);
+}
+.earning-btn{
+	background-color: var(--green);
+}
